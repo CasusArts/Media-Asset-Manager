@@ -1,0 +1,13 @@
+{% extends "manager/base.html" %}
+
+{% block content %}
+  {% if all_tracks %}
+    <ul>
+      {% for track in all_tracks %}
+        <li>{{ track }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No Tracks found!!!</p>
+  {% endif %}
+{% endblock %}

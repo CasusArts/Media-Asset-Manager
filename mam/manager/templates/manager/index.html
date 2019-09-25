@@ -1,18 +1,5 @@
 {% extends "manager/base.html" %}
 
-{% block heading %}
-  <h1>Django</h1>
-{% endblock %}
-
 {% block content %}
-  {% if all_tracks %}
-    <ul>
-      {% for track in all_tracks %}
-        <li>{{ track }}</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>No Tracks found!!!</p>
-  {% endif %}
+  <h1>Media Asset Manager</h1>
 {% endblock %}
-
