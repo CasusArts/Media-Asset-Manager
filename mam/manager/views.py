@@ -1,6 +1,4 @@
-from django.template import loader
 from django.shortcuts import render
-from django.http import HttpResponse
 
 from .models import Track, Artist, Label, Album
 
