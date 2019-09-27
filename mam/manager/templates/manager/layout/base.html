@@ -1,0 +1,61 @@
+{% load staticfiles %}
+
+{# Load the tag library #}
+{% load bootstrap4 %}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+  <title>Media Asset Manager</title>
+
+
+  {# Load CSS and JavaScript #}
+  {% bootstrap_css %}
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/offcanvas.css' %}" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+{% include "manager/layout/navbar.html" %}
+
+
+<main role="main" class="container">
+  {% block heading %}
+
+  {% endblock %}
+
+  {% block content %}
+
+
+  {% endblock content %}
+
+
+</main>
+
+{% bootstrap_javascript jquery='full' %}
+
+<script src="{% static 'js/offcanvas.js' %}"></script>
+</body>
+</html>
