@@ -19,6 +19,9 @@ class Artist(models.Model):
     def get_absolute_url(self):
         return reverse("artist_detail", kwargs={"pk": self.pk})
 
+    def __str__(self):
+        return f"{self.artist_name}"
+
 
 class Album(models.Model):
     album_title = models.CharField(max_length=120, default="Unknown Album")
@@ -32,6 +35,9 @@ class Album(models.Model):
 
     def get_absolute_url(self):
         return reverse("album_detail", kwargs={"pk": self.pk})
+
+    def __str__(self):
+        return f"{self.album_title}"
 
 
 class Label(models.Model):
@@ -47,6 +53,9 @@ class Label(models.Model):
     def get_absolute_url(self):
         return reverse("label_detail", kwargs={"pk": self.pk})
 
+    def __str__(self):
+        return f"{self.label_name}"
+
 
 class Track(models.Model):
     track_title = models.CharField(max_length=120, default="Unknown Track")
@@ -60,6 +69,9 @@ class Track(models.Model):
     class Meta:
         verbose_name = "Track"
         verbose_name_plural = verbose_name + "s"
+
+    def get_absolute_url(self):
+        return reverse("track_detail", kwargs={"pk": self.pk})
 
     def __str__(self):
         return f"{self.track_artist} - {self.track_title}"
