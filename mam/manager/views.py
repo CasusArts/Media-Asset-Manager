@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import Track, Artist, Label, Album
 
@@ -15,3 +15,11 @@ def list_all_tracks(request):
         'tracks_page': 'active'
     }
     return render(request, 'manager/tracks.html', context)
+
+
+def track_details(request, track_id):
+    # TODO: how get single track by id?
+    track = get_object_or_404(Track, pk=track_id)
+    context = {'track': track}
+
+    return render(request, 'manager/track_detail.html', context)

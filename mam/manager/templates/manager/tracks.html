@@ -19,7 +19,8 @@
                 <rect width="100%" height="100%" fill="#e83e8c"/>
               </svg>
 
-              <span class="position-static">[{{ track.track_year }}] - <a href="#">{{ track.track_artist }}</a> - {{ track.track_title }} (<a
+              <span class="position-static">[{{ track.track_year }}] - <a href="#">{{ track.track_artist }}</a> - <a
+                  href="{% url 'track_details' track.id %}">{{ track.track_title }}</a> (<a
                   href="#">{{ track.track_album }}</a> )</span>
 
             </li>

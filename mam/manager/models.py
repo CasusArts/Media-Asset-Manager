@@ -13,9 +13,6 @@ class Artist(models.Model):
         verbose_name = "Artist"
         verbose_name_plural = verbose_name + "s"
 
-    def __str__(self):
-        return self.artist_name
-
     def get_absolute_url(self):
         return reverse("artist_detail", kwargs={"pk": self.pk})
 
