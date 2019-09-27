@@ -10,28 +10,30 @@
 
       <tbody>
       <tr>
-        <td>Title:</td>
-        <td>{{ track.track_title }}</td>
+        <td><strong>Title:</strong></td>
+        <td><em>{{ track.track_title }}</em></td>
       </tr>
       <tr>
-        <td>Artist:</td>
-        <td>{{ track.track_artist }}</td>
+        <td><strong>Artist:</strong></td>
+        <td><a href="#">{{ track.track_artist }}</a></td>
       </tr>
       <tr>
-        <td>Album:</td>
-        <td>{{ track.track_album }}</td>
+        <td><strong>Album:</strong></td>
+        <td><a href="#">{{ track.track_album }}</a></td>
       </tr>
       <tr>
-        <td>Year:</td>
-        <td>{{ track.track_year }}</td>
+        <td><strong>Year:</strong></td>
+        <td><a href="#">{{ track.track_year }}</a></td>
       </tr>
       <tr>
-        <td>Genre:</td>
-        <td>{{ track.track_genre }}</td>
+        <td><strong>Genre:</strong></td>
+        <td><a href="#">{{ track.track_genre }}</a></td>
       </tr>
       <tr>
-        <td>Comment:</td>
-        <td>{{ track.track_comment }}</td>
+        <td><strong>Comment:</strong></td>
+        <td>
+          <p>{{ track.track_comment }}</p>
+        </td>
       </tr>
       </tbody>
     </table>
