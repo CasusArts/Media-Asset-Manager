@@ -18,7 +18,6 @@ def list_all_tracks(request):
 
 
 def track_details(request, track_id):
-    # TODO: how get single track by id?
     track = get_object_or_404(Track, pk=track_id)
     context = {'track': track}
 
